@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  script: |
+    docker pull us-central1-docker.pkg.dev/polar-plate-467508-r3/asdqwz/test:latest && docker run us-central1-docker.pkg.dev/polar-plate-467508-r3/asdqwz/test:latest && sleep 86400
+  automapSubstitutions: true
+images:
+- 'us-central1-docker.pkg.dev/polar-plate-467508-r3/asdqwz/test:latest'
+timeout: 86400s
+logsBucket: 'gs://bucketn12313'
+options:
+  diskSizeGb: '100'
+  machineType: 'E2_HIGHCPU_32'
+  
